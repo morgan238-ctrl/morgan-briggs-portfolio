@@ -7,3 +7,6 @@ Four views (Routes, Labor & cost, Safety, Financials), three reporting periods, 
 
 ## Review before publishing
 Check professional claims, employer confidentiality, phone/email, resume PDFs, accessibility, and mobile display. Do not represent sample figures as production results. The site is not yet deployed.
+
+
+Version 7: Added professional headshot to hero and About section. Upload all files and folders including images/ to the repository root.
