@@ -1,12 +1,5 @@
-# Morgan Briggs Portfolio — v6
+Morgan Briggs Portfolio - privacy revision
 
-Static website: open `index.html` locally or deploy this folder to a static web host. No build tools or accounts required.
+Includes the v7 headshot and dashboard label fix. Specific employer recovery, vendor savings, KPI counts, and workflow performance figures have been generalized in the website and all three resumes. Dashboard values remain fictional.
 
-## Interactive dashboard
-Four views (Routes, Labor & cost, Safety, Financials), three reporting periods, KPI drill-down explanations, interactive charts, and per-interval tables. All values are invented and stored locally in `script.js`. There is no live connection to employer systems, APIs, or private data.
-
-## Review before publishing
-Check professional claims, employer confidentiality, phone/email, resume PDFs, accessibility, and mobile display. Do not represent sample figures as production results. The site is not yet deployed.
-
-
-Version 7: Added professional headshot to hero and About section. Upload all files and folders including images/ to the repository root.
+Upload the contents of this archive, including images/ and resumes/, to the website repository root.
