@@ -1,5 +1,5 @@
-Morgan Briggs Portfolio - privacy revision
+Morgan Briggs Portfolio - Enhanced Synthetic Demo
 
-Includes the v7 headshot and dashboard label fix. Specific employer recovery, vendor savings, KPI counts, and workflow performance figures have been generalized in the website and all three resumes. Dashboard values remain fictional.
+Includes privacy edits, headshot, targeted resumes, dashboard fix, and a three-step fictional contribution investigation with visible validation exclusions and an overtime scenario slider. The guided case is independent of the overview reporting-period selector. All demonstration records are invented; no private systems or datasets are connected.
 
-Upload the contents of this archive, including images/ and resumes/, to the website repository root.
+Upload the files and folders inside this ZIP to the repository root.
