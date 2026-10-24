@@ -1,0 +1,66 @@
+{
+  "artifact": "independent synthetic engineering sample",
+  "status": "passed",
+  "executed_at_utc": "2026-10-24T18:19:09.240676+00:00",
+  "check_count": 11,
+  "checks": [
+    {
+      "check": "valid metadata produces seven dates",
+      "result": "pass"
+    },
+    {
+      "check": "matching explicit Sunday retains same source week",
+      "result": "pass"
+    },
+    {
+      "check": "station mismatch without selected date",
+      "result": "pass: rejected"
+    },
+    {
+      "check": "station mismatch with selected date",
+      "result": "pass: rejected"
+    },
+    {
+      "check": "missing timestamp with selected date",
+      "result": "pass: rejected"
+    },
+    {
+      "check": "wrong selected Sunday",
+      "result": "pass: rejected"
+    },
+    {
+      "check": "identical revision retry does not duplicate",
+      "result": "pass"
+    },
+    {
+      "check": "same revision ID with changed content is held",
+      "result": "pass"
+    },
+    {
+      "check": "latest daily revision joins correct schedule provenance",
+      "result": "pass"
+    },
+    {
+      "check": "fictional source bytes and fingerprint retained",
+      "result": "pass"
+    },
+    {
+      "check": "both distinct revision versions retained",
+      "result": "pass"
+    }
+  ],
+  "latest_revision": [
+    {
+      "id": "demo-revision-b",
+      "roster_date": "2030-01-06",
+      "saved_at_utc": "2030-01-06T10:00:00Z",
+      "source_file": "fictional-schedule.json",
+      "route_target": 2
+    }
+  ],
+  "limits": [
+    "Not a dashboard regression suite or human acceptance test.",
+    "Fixtures are JSON, not XLSX workbooks; full workbook parsing is outside this sample.",
+    "PowerShell excerpt is not executed by this runner."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Rainier schedule import and roster revision acceptance",
+  "published_summary_date": "2026-10-24",
+  "recorded_test_date": "2026-10-23",
+  "method": "Recorded agent tests of copied application code using manufactured workbook and disposable dashboard data; not rerun for this portfolio update.",
+  "metadata_defect": {
+    "requirement": "A selected Sunday must not bypass worksheet metadata validation.",
+    "before": "Mismatched worksheet station rejected with inferred dates but accepted on an explicit-Sunday first import into a manufactured database.",
+    "correction": "Always validate matching metadata, retain export timestamp, infer year from source and compare the selected Sunday with source dates.",
+    "after": "Installed parser copy rejected the mismatch in both paths; all 14 malformed cases also rejected with explicit dates.",
+    "parser_mocked": false,
+    "source_hashes_unchanged_during_verification": true,
+    "rejection_cases": [
+      "missing worksheet",
+      "missing export metadata",
+      "invalid timestamp",
+      "timestamp disagreement",
+      "company disagreement",
+      "station disagreement",
+      "duplicate driver",
+      "missing transporter ID",
+      "formula work block",
+      "wrong weekday label",
+      "different date windows",
+      "six day columns",
+      "non Sunday start",
+      "macro member marker"
+    ],
+    "boundary": "Installed on-disk fix was verified in isolation; loading by a running service was not established."
+  },
+  "roster_revision_workflow": {
+    "actual_dashboard_code": true,
+    "custom_test_editor": false,
+    "checks": [
+      {
+        "requirement": "Preview must be distinct from durable save",
+        "observed": "Preview labeled unsaved; revision list empty before explicit save."
+      },
+      {
+        "requirement": "Entered fields survive save and reopen",
+        "observed": "Keyboard-entered note, route count 1, target 1 and attendance retained in saved revision."
+      },
+      {
+        "requirement": "Review should not overwrite current editor draft",
+        "observed": "Different editor-only draft remained after reviewing saved revision."
+      },
+      {
+        "requirement": "Replace loads the reviewed revision",
+        "observed": "Saved note and target returned to the editor."
+      },
+      {
+        "requirement": "Undo restores editor draft without rewriting saved history",
+        "observed": "Editor-only draft returned; stored saved revision stayed unchanged."
+      }
+    ],
+    "verification": {
+      "revision_count": 3,
+      "latest_actual_routes": 1,
+      "latest_target": 1,
+      "source_workbook_bytes_match": true,
+      "protected_sentinel_unchanged": true,
+      "sqlite_integrity_check": "ok"
+    },
+    "test_harness_issue": "Fill-only automation did not commit onchange-backed fields. Successful checks used keyboard entry, Tab and redraw verification; two early trial revisions were retained.",
+    "boundary": "This automation behavior is not evidence of an ordinary-user application data-loss defect."
+  },
+  "human_workflow_check": {
+    "reported_date": "2026-10-24",
+    "execution_date": "not specified",
+    "reported_by": "Morgan Briggs",
+    "sequence": [
+      "Saved a roster",
+      "Reopened the roster",
+      "Undid edits",
+      "Reloaded to verify the resulting state"
+    ],
+    "evidence_type": "User-reported workflow check in conversation; not independently observed during this portfolio task.",
+    "scope": "No inference of database-history rollback, exact row values, all restore paths, or whole-application signoff."
+  },
+  "not_established": [
+    "Whole-application human signoff",
+    "Real business-data correctness beyond the reported check",
+    "Real-phone or parking-lot connectivity",
+    "Shared authentication or multi-user concurrency",
+    "Whole-application certification",
+    "Cross-file transaction atomicity"
+  ],
+  "separate_portfolio_sample": {
+    "date": "2026-10-24",
+    "type": "New independent simplified synthetic sample",
+    "check_count": 11,
+    "status": "passed",
+    "powershell": "Syntax checked only; DAO/Access execution not exercised."
+  }
+}
